@@ -1,5 +1,4 @@
-#/usr/bin/env python
-import socket #pip install sockets
+import socket #pip install socketst
 from serial import Serial #pip install serial (pyserial?)
 from _thread import *
 from threading import Lock
