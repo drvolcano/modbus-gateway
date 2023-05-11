@@ -4,6 +4,8 @@
  sudo systemctl daemon-reload
  sudo systemctl start trovis.service
  sudo systemctl status trovis.service
+ sudo systemctl enable trovis.service
+
  
  bzw amis.service
  
