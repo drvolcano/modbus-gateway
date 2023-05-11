@@ -1,3 +1,4 @@
+
 import socket #pip install socketst
 from serial import Serial #pip install serial (pyserial?)
 from _thread import *
@@ -10,8 +11,14 @@ keybytes = bytes(bytearray.fromhex(key))
 
 registers = bytearray()
 
+import serial.tools.list_ports
+ports = serial.tools.list_ports.comports()
 serial = Serial()
-serial.port = "/dev/ttyUSB1"
+
+for port, desc, hwid in sorted(ports):
+    if 'CP2102N' in desc:
+        serial.port = port
+
 serial.baudrate = 9600
 serial.stopbits = 1
 serial.parity = "E"
