@@ -1,3 +1,4 @@
 # modbus-gateway
-Small code that works as interface between Modbus TCP and TRU.
-Especially used to access a Samson Trovis 5573 controller.
+Using a Raspberry-Pi as Modbus-TCP gateway to serveral other devices:
+- SAMSON Trovis 5573 via Modbus RTU (TTL)
+- Siemens AMIS vis optical interface
