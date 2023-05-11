@@ -15,8 +15,15 @@ def modbusCrc(msg:str) -> int:
                 crc >>= 1
     return crc
 
+import serial.tools.list_ports
+ports = serial.tools.list_ports.comports()
 serial = Serial()
-serial.port = "/dev/ttyUSB0"
+
+
+for port, desc, hwid in sorted(ports):
+    if 'FT232R' in desc:
+        serial.port = port
+
 serial.baudrate = 19200
 serial.stopbits = 1
 serial.parity = "N"
