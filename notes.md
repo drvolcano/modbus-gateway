@@ -1,3 +1,9 @@
+apt install -y python3-pip
+pip install sockets
+pip install pyserial
+pip install pycrypto
+ 
+ 
  Setting up a service
  ```
  sudo vim /lib/systemd/system/trovis.service
