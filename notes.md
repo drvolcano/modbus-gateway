@@ -1,12 +1,23 @@
+'''
 apt install -y python3-pip
 pip install sockets
 pip install pyserial
 pip install pycrypto
+'''
+
+'''
+sudo apt install -y neovim
+'''
  
  
  Setting up a service
  ```
  sudo vim /lib/systemd/system/trovis.service
+ sudo vim /lib/systemd/system/amis.service
+ sudo vim /lib/systemd/system/shakrky.service
+ 
+ 
+ 
  sudo systemctl daemon-reload
  sudo systemctl start trovis.service
  sudo systemctl status trovis.service
