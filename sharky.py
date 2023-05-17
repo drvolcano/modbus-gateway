@@ -114,7 +114,7 @@ def amisreader():
             part2 = serial.read(length )
             part3 = serial.read(2)
             #print(part1+ part2+ part3)
-            äprint( ''.join('{:02x}'.format(x) for x in (part1+part2+part3)))
+            #print( ''.join('{:02x}'.format(x) for x in (part1+part2+part3)))
 
             temp = bytearray()
 
